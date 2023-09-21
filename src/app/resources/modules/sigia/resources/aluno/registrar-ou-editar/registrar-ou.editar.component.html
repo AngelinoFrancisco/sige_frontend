@@ -1,0 +1,120 @@
+<main id="main_" class="main_">
+
+    <div class="pagetitle mb-4">
+        <h1> <i class="bi bi-server"></i><span class="mx-2">Registrar aluno</span></h1>
+    </div>
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Anexe documentos [Formato PDF][Formato PNG]</h5>
+                        <form class="row" [formGroup]="simpleForm">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nome_completo"
+                                        style="font-size: 14px; font-weight: 600; color:#041b43">Nome Completo</label>
+                                    <input type="text" class="form-control py-4" id="nome_completo"
+                                        formControlName="nome_completo"
+                                        style="border-radius: 5px; border: 2px solid #041b43; color:#041b43">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="nascimento"
+                                        style="font-size: 14px; font-weight: 600; color:#041b43">Data de
+                                        Nascimento</label>
+                                    <input type="date" class="form-control py-4" id="nascimento"
+                                        formControlName="nascimento"
+                                        style="border-radius: 5px; border: 2px solid #041b43; color:#041b43">
+                                </div>
+
+                                
+                                <div class="form-group">
+                                    <label for="bi"
+                                        style="font-size: 14px; font-weight: 600; color:#041b43"> BI / Cédula</label>
+                                    <input type="text" class="form-control py-4" id="bi"
+                                        formControlName="bi"
+                                        style="border-radius: 5px; border: 2px solid #041b43; color:#041b43">
+                                </div>
+
+                                  
+                                <div class="form-group">
+                                    <label for="nome_pai"
+                                        style="font-size: 14px; font-weight: 600; color:#041b43"> Nome do Pai</label>
+                                    <input type="text" class="form-control py-4" id="nome_pai"
+                                        formControlName="nome_pai"
+                                        style="border-radius: 5px; border: 2px solid #041b43; color:#041b43">
+                                </div>
+
+                                  
+                                <div class="form-group">
+                                    <label for="nome_mae"
+                                        style="font-size: 14px; font-weight: 600; color:#041b43"> Nome Mãe</label>
+                                    <input type="text" class="form-control py-4" id="nome_mae"
+                                        formControlName="nome_mae"
+                                        style="border-radius: 5px; border: 2px solid #041b43; color:#041b43">
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nome_completo"
+                                        style="font-size: 14px; font-weight: 600; color:#041b43">Gênero</label>
+                                    <input type="text" class="form-control py-4" id="nome_completo"
+                                        formControlName="nome_completo"
+                                        style="border-radius: 5px; border: 2px solid #041b43; color:#041b43">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="morada"
+                                        style="font-size: 14px; font-weight: 600; color:#041b43">Morada</label>
+                                    <input type="text" class="form-control py-4" id="morada"
+                                        formControlName="morada"
+                                        style="border-radius: 5px; border: 2px solid #041b43; color:#041b43">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone"
+                                        style="font-size: 14px; font-weight: 600; color:#041b43">Telefone</label>
+                                    <input type="number" class="form-control py-4" id="telefone"
+                                        formControlName="telefone"
+                                        style="border-radius: 5px; border: 2px solid #041b43; color:#041b43">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone_encarregado"
+                                        style="font-size: 14px; font-weight: 600; color:#041b43">Telefone do(a) Encarregado(a)</label>
+                                    <input type="number" class="form-control py-4" id="telefone_encarregado"
+                                        formControlName="telefone_encarregado"
+                                        style="border-radius: 5px; border: 2px solid #041b43; color:#041b43">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="formFile"
+                                        class="btn btn-outline-primary d-flex align-items-center justify-content-center "
+                                        style="border-radius: 5px">
+                                        <i class="bi bi-file-pdf-fill  mx-2 " style="font-size:1.3rem"></i>
+                                        Escolher o ficheiro
+                                    </label>
+                                    <input class="form-control" type="file" id="formFile" style="display:none"
+                                        (change)="onSelectFile($event)">
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <button type="submit" class="btn btn-outline-primary px-2 m-2"
+                                    style="border-radius: 2px;" (click)="onSubmit()" >Salvar</button>
+                                <button type="reset" class="btn btn-outline-danger"
+                                    style="border-radius: 2px;" (click)="onCancel()">Cancelar</button>
+                                 
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
